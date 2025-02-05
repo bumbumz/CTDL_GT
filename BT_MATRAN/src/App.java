@@ -4,5 +4,7 @@ public class App {
         matrix.printMatrixA();
         matrix.printMatrixB();
         matrix.sumMaTran();
+        matrix.tichMaTran();
     }
+    
 }

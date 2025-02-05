@@ -16,8 +16,8 @@ public class Matrix {
         Random randomB = new Random();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                maTrixA[i][j] = randomA.nextInt(50);
-                maTrixB[i][j] = randomB.nextInt(50);
+                maTrixA[i][j] = randomA.nextInt(10);
+                maTrixB[i][j] = randomB.nextInt(10);
             }
         }
     }
@@ -51,6 +51,19 @@ public class Matrix {
         }
 
         printMatrix(sumMt);
+    }
+
+    public void tichMaTran() {
+        int[][] tempMt = new int[this.maTrixA.length][maTrixA[0].length];
+
+        for (int i = 0; i < maTrixA.length; i++) {
+            for (int j = 0; j < maTrixA.length; j++) {
+                for (int k = 0; k < maTrixA.length; k++) {
+                    tempMt[i][j] += maTrixA[i][k] * maTrixB[k][j];
+                }
+            }
+        }
+        printMatrix(tempMt);
     }
 
 }
